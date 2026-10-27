@@ -1,33 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-br"
-<head>
+<html lang="pt-BR">
+  <head>
     <meta charset="UTF-8" />
-    |<title>aula de forms</title><title><link rel=stylesheet</title>
-</head>
-<body>
-    <header class="faixa-azul">
-    <h1>ACADEMIA DE HEROIS!</h1>
-    <form action="#" method="get" >
-        <Link rel="stylesheet" href="css/style.css">
-            </header>
-<!--os campos do formulario ficam aq-->
-<label for="busca">NOME DO HEROI</
+    <title>Cadastro de gadgets</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/post.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro de gadgets</h1>
+      <p>Preencha os dados abaixo!!!</p>
+    </header>
+    <main>
+      <section>
+        <h2>Novo gadget</h2>
 
-<p>QUAL PODER VOCE PREFERE?</p>
-<input id="voar" name="poder"
-type="radio" value="voar"
-<label for="voar">VOAR</label><br>
+        <form id="form-gadget">
+          <label for="title">Nome do gadget: </label>
+          <input id="title" name="title" type="text" minlength="3" maxlength="120" required />
 
+          <label for="categoria">Categoria: </label>
+          <input id="categoria" name="categoria" type="text" required />
 
-<input id="velocidade" name="poder"
-type="radio" value="velocidade"
-<label for="velocide">VELOCIDADE</label><br>
+          <label for="marca">Marca: </label>
+          <input id="marca" name="marca" type="text" required />
 
-<input id="superforca" name="poder"
-type="radio" value="superforca"
-<label for="superforca">SUPERFORÇA</label><br>
+          <label for="preco">Preço: </label>
+          <input id="preco" name="preco" type="number" required />
 
-<label for="PORQUE VOCE ESCOLHEU ESSE HEROI?">PORQUE VOCE ESCOLHEU ESSE HEROI?:</label>
-    <input id="PORQUE VOCE ESCOLHEU ESSE HEROI?" name="PORQUE VOCE ESCOLHEU ESSE HEROI" type="PORQUE VOCE ESCOLHEU ESSE HEROI?" required />
-    <br> 
-<br>
+          <label for="ano_lancamento">Ano de lançamento: </label>
+          <input id="ano_lancamento" name="ano_lancamento" type="number" required />
+
+          <label for="imageUrl">URL da imagem (opcional): </label>
+          <input id="imageUrl" name="imageUrl" type="url" />
+
+          <button type="submit">Cadastrar gadget</button>
+        </form>
+
+        <p id="resposta"></p>
+      </section>
+    </main>
+  </body>
+</html>
